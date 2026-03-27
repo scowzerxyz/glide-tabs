@@ -61,15 +61,30 @@ export function VariantDemo() {
 }
 
 export function ScrollDemo() {
+  const [variant, setVariant] = useState<"pill" | "underline">("pill");
   const [active, setActive] = useState("Overview");
 
   return (
     <div className="demo-block">
+      <div className="demo-controls">
+        <button
+          className={`control-btn ${variant === "pill" ? "active" : ""}`}
+          onClick={() => setVariant("pill")}
+        >
+          Pill
+        </button>
+        <button
+          className={`control-btn ${variant === "underline" ? "active" : ""}`}
+          onClick={() => setVariant("underline")}
+        >
+          Underline
+        </button>
+      </div>
       <div className="demo-preview">
         <TabGroup
           value={active}
           onChange={setActive}
-          variant="pill"
+          variant={variant}
           maxWidth={360}
         >
           {allTabs.map((tab) => (

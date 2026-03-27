@@ -3,6 +3,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useId,
   useRef,
   useState,
 } from 'react';
@@ -30,6 +31,7 @@ export function TabGroup({
   style,
   children,
 }: TabGroupProps) {
+  const instanceId = useId();
   const tabRefs = useRef<Map<string, HTMLButtonElement>>(new Map());
   const containerRef = useRef<HTMLDivElement>(null);
   const [indicator, setIndicator] = useState<{
@@ -103,7 +105,7 @@ export function TabGroup({
           <motion.div
             data-glide-indicator=""
             data-variant={variant}
-            layoutId="glide-indicator"
+            layoutId={`glide-indicator-${instanceId}`}
             style={{
               left: indicator.left,
               width: indicator.width,

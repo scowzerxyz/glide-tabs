@@ -1,17 +1,21 @@
 import { HeroDemo, VariantDemo, ScrollDemo, CopyButton } from "./demo";
+import { ThemeToggle } from "./theme-toggle";
 
 export default function Home() {
   return (
     <div className="page">
       <header className="header">
-        <a
-          href="https://github.com/gregball/glide-tabs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="github-link"
-        >
-          GitHub
-        </a>
+        <nav className="header-nav">
+          <ThemeToggle />
+          <a
+            href="https://github.com/gregball/glide-tabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="github-link"
+          >
+            GitHub
+          </a>
+        </nav>
       </header>
 
       <main className="main">
@@ -71,30 +75,6 @@ function App() {
             overflow.
           </p>
           <ScrollDemo />
-        </section>
-
-        <section className="section">
-          <h2 className="section-title">Theming</h2>
-          <p className="section-desc">
-            Customize with CSS custom properties. Override them on{" "}
-            <code>[data-glide-root]</code>.
-          </p>
-          <div className="code-block wide">
-            <pre>
-              <code>{`[data-glide-root] {
-  --glide-bg: #f4f4f5;
-  --glide-active-bg: #ffffff;
-  --glide-text: #71717a;
-  --glide-active-text: #09090b;
-  --glide-border-radius: 8px;
-  --glide-padding: 4px;
-  --glide-tab-padding: 8px 16px;
-  --glide-font-size: 14px;
-  --glide-underline-color: #09090b;
-  --glide-underline-height: 2px;
-}`}</code>
-            </pre>
-          </div>
         </section>
 
         <section className="section">
