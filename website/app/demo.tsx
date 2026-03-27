@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { TabGroup, Tab } from "../../src";
-import "../../src/styles.css";
+import { TabGroup, Tab } from "glide-tabs";
+import "glide-tabs/styles.css";
 
 const allTabs = [
   "Overview",

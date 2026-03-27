@@ -35,6 +35,9 @@ importers:
 
   website:
     dependencies:
+      glide-tabs:
+        specifier: ^0.1.0
+        version: 0.1.0(motion@12.38.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       motion:
         specifier: ^12.38.0
         version: 12.38.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -724,6 +727,13 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
+  glide-tabs@0.1.0:
+    resolution: {integrity: sha512-0X7llVF9LNJlY65+PZflZ3pkW+8JZmfQlAaHB6KG+fguFDWvYJkKEnJgIPcMpKuoZxxV4QOG/vXSkp2cG4ga6Q==}
+    peerDependencies:
+      motion: '>=11'
+      react: '>=18'
+      react-dom: '>=18'
+
   joycon@3.1.1:
     resolution: {integrity: sha512-34wB/Y7MW7bzjKRjUKTa46I2Z7eV62Rkhva+KkopW7Qvv/OSWBqvkSY7vusOPrNuZcUG3tApvdVgNB8POj3SPw==}
     engines: {node: '>=10'}
@@ -1382,6 +1392,12 @@ snapshots:
 
   fsevents@2.3.3:
     optional: true
+
+  glide-tabs@0.1.0(motion@12.38.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+    dependencies:
+      motion: 12.38.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   joycon@3.1.1: {}
 
