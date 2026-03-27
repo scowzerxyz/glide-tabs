@@ -1,0 +1,87 @@
+[data-glide-root] {
+  --glide-bg: #f4f4f5;
+  --glide-active-bg: #ffffff;
+  --glide-text: #71717a;
+  --glide-active-text: #09090b;
+  --glide-border-radius: 8px;
+  --glide-padding: 4px;
+  --glide-tab-padding: 8px 16px;
+  --glide-font-size: 14px;
+  --glide-font-weight: 500;
+  --glide-underline-color: #09090b;
+  --glide-underline-height: 2px;
+  --glide-indicator-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
+}
+
+[data-glide-root] {
+  position: relative;
+  display: inline-flex;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+[data-glide-root]::-webkit-scrollbar {
+  display: none;
+}
+
+[data-glide-root][data-variant='pill'] {
+  background: var(--glide-bg);
+  border-radius: var(--glide-border-radius);
+  padding: var(--glide-padding);
+}
+
+[data-glide-root][data-variant='underline'] {
+  border-bottom: 1px solid var(--glide-bg);
+}
+
+[data-glide-tab] {
+  all: unset;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  padding: var(--glide-tab-padding);
+  font-size: var(--glide-font-size);
+  font-weight: var(--glide-font-weight);
+  font-family: inherit;
+  color: var(--glide-text);
+  white-space: nowrap;
+  user-select: none;
+  transition: color 0.15s ease;
+  border-radius: calc(var(--glide-border-radius) - 2px);
+}
+
+[data-glide-tab]:hover:not([data-disabled='true']) {
+  color: var(--glide-active-text);
+}
+
+[data-glide-tab][data-active='true'] {
+  color: var(--glide-active-text);
+}
+
+[data-glide-tab][data-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+[data-glide-tab]:focus-visible {
+  outline: 2px solid var(--glide-active-text);
+  outline-offset: -2px;
+}
+
+[data-glide-indicator][data-variant='pill'] {
+  position: absolute;
+  top: var(--glide-padding);
+  bottom: var(--glide-padding);
+  background: var(--glide-active-bg);
+  border-radius: calc(var(--glide-border-radius) - 2px);
+  box-shadow: var(--glide-indicator-shadow);
+}
+
+[data-glide-indicator][data-variant='underline'] {
+  position: absolute;
+  bottom: 0;
+  height: var(--glide-underline-height);
+  background: var(--glide-underline-color);
+  border-radius: var(--glide-underline-height);
+}
