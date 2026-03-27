@@ -8,7 +8,7 @@ export default function Home() {
         <nav className="header-nav">
           <ThemeToggle />
           <a
-            href="https://github.com/gregball/glide-tabs"
+            href="https://github.com/scowzerxyz/glide-tabs"
             target="_blank"
             rel="noopener noreferrer"
             className="github-link"
