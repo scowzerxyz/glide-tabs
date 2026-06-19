@@ -1,6 +1,6 @@
 # Glide Tabs
 
-An animated tab group component for React, powered by [motion.dev](https://motion.dev).
+An animated segmented control/tab group component for React, powered by [motion.dev](https://motion.dev).
 
 ## Installation
 
